@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        any
+        docker { image 'node:7-alpine' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'sleep 3'
+                sh 'node --version'
             }
         }
     }
